@@ -1,6 +1,6 @@
 <?php
 
-namespace Ninjacn;
+namespace Ninjacn\Npkk;
 
 class Http 
 {
