@@ -1,19 +1,26 @@
 <?php
 
-namespace Ninjacn\Npkk;
+namespace Ninjacn\Npkk\Http;
 
-class Http 
+class Request 
 {
-
     public static function test() {
         return 'test';
+    }
+
+    public static function sendGetRequest($url, $header = array()) {
+        return self::sendRequest($url, 'get', array(), $header);
+    }
+
+    public static function sendPostRequest($url, $post = array(), $header = array()) {
+        return self::sendRequest($url, 'post', $post, $header);
     }
 
     /*
      * 非200都返回false
      * @return false|mixed
      */
-    public static function sendRequest($url, $method = 'get', $postData = array(), $header = array()) {
+    private static function sendRequest($url, $method = 'get', $postData = array(), $header = array()) {
         $debug = false;
         try {
             $ch = curl_init();
@@ -56,7 +63,7 @@ class Http
             curl_close($ch);
         } catch(\Exception $e) {
         }
-        return false;
+        return null;
     }
 
 }

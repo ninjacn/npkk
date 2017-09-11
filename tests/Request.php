@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Ninjacn\Npkk\Http;
+use Ninjacn\Npkk\Http\Request;
 
-echo Http::test();
+echo Request::test();
