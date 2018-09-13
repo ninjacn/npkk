@@ -10,14 +10,14 @@
         }
     ],
     "require": {
-        "php": ">=5.4"
+        "php": ">=5.5"
     },
     "require-dev": {
         "phpunit/phpunit": "4.8.*"
     },
     "autoload": {
         "psr-4": {
-            "Ninjacn\\": "src/"
+            "Npkk\\": "src/"
         }
     }
 }
